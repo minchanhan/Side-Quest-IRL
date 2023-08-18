@@ -10,12 +10,41 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Side Quest IRL")
+            
+            HStack {
+                Text("Daily Score: 4")
+                Text("All-Time Score: 133")
+            }
+            
+            Text("Current Side Quest:")
+            
+            VStack {
+                Text("Title of Quest")
+                Text("Say \"hi\" to a stranger")
+                Image("examplepic").resizable()
+                
+            }.padding()
+                .background(
+                    Rectangle().foregroundColor(.blue).cornerRadius(15)
+                        .shadow(radius: 15)
+                )
+                .padding()
+            
+            HStack {
+                Text("Time Remaining: 18hrs 11m 08s")
+                Text("Daily Skips Remaining: 1")
+            }
+            
+            HStack {
+                Spacer()
+                Text("SKIP")
+                Spacer()
+                Text("COMPLETE")
+                Spacer()
+            }
+            
         }
-        .padding()
     }
 }
 
